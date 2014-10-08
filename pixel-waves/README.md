@@ -11,11 +11,13 @@ Create the GEM window by clicking on create/destroy
 
 Open an image.
 
-Press the start button and adjust the rate at which pixels are read using the knob
+Press the start/record button and adjust the rate at which pixels are read using the knob
 
 The current column and line/X and Y data are displayed alongside the red, green and blue values of the current pixel.
 
 As the colour values range from 0-1 scaling is necessary to make the audio audible. Use the knobs on the right to scale all colour channels or each one individually.
+
+A .wav file is saved once you click on the stop/save button.
 
 Enjoy!
 
