@@ -10,4 +10,6 @@ The text source can either be typed in or read from a plain text (.txt) file
 - m_symbolarray.pd. This can be downloaded from rjdj library https://github.com/rjdj/rjlib/blob/master/rj/m_symbolarray.pd
 
 ## Usage
-
+- Open text-to-sound.pd
+- Click on the Create/Destroy message to create a GEM window
+- Open a plain text file
