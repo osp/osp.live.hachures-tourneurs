@@ -1,0 +1,738 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+ 
+ <meta charset="UTF-8">
+    <title>Balsa: flyer</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/reset.css" />
+    <link rel="stylesheet" href="print.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography.less" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="typography2.less" type="text/less" media="all" charset="utf-8">
+     <link rel="stylesheet"  href="lib/jquery-ui-1.10.3/css/smoothness/jquery-ui-1.10.3.custom.min.css"  type="text/css" media="all" charset="utf-8">
+
+<style>
+        .moveable svg {
+                display: none;
+        }
+        path,
+        circle {
+            fill: white !important;
+            stroke: white !important;
+        }
+        path {
+            stroke-width: 2px !important;
+        }
+</style>
+
+</head>
+<body>
+    <!-- PRINT MARKS -->
+    <div id="print-marks">
+        <div id="master-page">
+            <div class="crop-top-left">
+                <div class="crop-right" style="top: 0; right: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0cm; left: 0;"></div>
+            </div>
+            <div class="crop-top-right">
+                <div class="crop-left" style="top: 0; left: 0;"></div>
+                <div class="crop-bottom" style="bottom: 0; right: 0;"></div>
+            </div>
+            <div class="crop-bottom-right">
+                <div class="crop-left" style="left: 0; bottom: 0;"></div>
+                <div class="crop-top" style="right: 0cm; top: 0;"></div>
+            </div>
+            <div class="crop-bottom-left">
+                <div class="crop-right" style="bottom: 0cm; right: 0;"></div>
+                <div class="crop-top" style="left: 0cm; top: 0"></div>
+            </div>
+
+            <section class="header">
+            </section>
+
+            <section class="page">
+            </section>
+
+            <section class="footer">
+            </section>
+        </div>
+    </div>
+    
+        <!-- STRUCTURE -->
+    <div id="pages">
+            <div id="page-1" class="preview-page">
+               <div class="flow" style="width: 100%;"> </div>
+             </div>
+            <div id="page-2" class="preview-page">
+               <div class="flow" style="width: 100%;"> </div>
+             </div>
+            <div id="page-3" class="preview-page">
+                <div class="flow tetiere" style="height: 55px;"> </div>
+               <div class="flow column column33" style="height: 90%;"> </div>
+                <div class="flow column column33"> </div>
+                <div class="flow column column33"> </div>
+            </div>
+            <div id="page-4" class="preview-page">
+                <div class="flow tetiere"> </div>
+               <div class="flow column column33"> </div>
+                <div class="flow column column66"> </div>
+
+            </div>
+            <div id="page-5" class="preview-page">
+                <div class="flow tetiere" style="height: 17%;"> </div>
+                <div class="flow column column50" style="height: 69%;"> </div>
+                <div class="flow column column50" style="height: 69%;"> </div>
+                <div class="flow tetiere" style="clear: both; height: 16%;"> </div>
+            </div>
+            <div id="page-6" class="preview-page">
+                <div class="flow tetiere"> </div>
+              <div class="flow column column33"> </div>
+            <div class="flow column column66"> </div>
+            </div>
+            <div id="page-7" class="preview-page">
+                <div class="flow tetiere"> </div>
+               <div class="flow column column33"> </div>
+	            <div class="flow column column66"> </div>
+            </div>
+            <div id="page-8" class="preview-page">
+               <div class="flow tetiere"> </div>
+               <div class="flow column column33"> </div>
+                <div class="flow column column66"> </div>
+            </div>
+            <div id="page-9" class="preview-page">
+                <div class="flow tetiere"> </div>
+                <div class="flow column column33"> </div>
+                   <div class="flow column column66"> </div>
+            </div>
+            <div id="page-10" class="preview-page">
+                <div class="flow tetiere"> </div>
+               <div class="flow column column33"> </div>
+                   <div class="flow column column66"> </div>
+            </div>
+            <div id="page-11" class="preview-page">
+               <div class="flow column column33" style="height: 100%;"> </div>
+                <div class="flow column column33" style="height: 100%;"> </div>
+                <div class="flow column column33" style="height: 100%;"> </div>
+            </div>
+            <div id="page-12" class="preview-page">
+               <div class="flow" style="width: 100%;"> </div>
+            </div>
+    </div>
+
+    <!-- INTERFACE -->
+    <div id="interface">
+        <button id="debug" class="button" href="#">Debug</button>
+        <button id="spread" class="button">Spread</button>
+        <button id="preview" class="button" href="#">Hi-res</button>
+        <div id="toc">
+            <button id="goto" class="button">Go to</button>
+            <ul id="toc-pages"></ul>
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <section id="container" style="z-index:100;">
+
+        <div id="cover1" class="infos-spectacle">
+        
+            <div class="dates" style="padding-right: 0px;">                           
+                     <div id="logo">
+                <p>bạlsa</p>
+                    </div>
+            </div>
+            
+            <h1>Nos petites madeleines</h1>
+<div class="dates" style="clear:both;font-size: 0.8em;">                           
+                   Festival 
+                   </div>
+
+             <img id="photo" src="hichem-pack/memories.jpg"  style="width: 331px; margin-bottom: 0.4em;">
+             
+
+            <div class="dates" style="font-size: 0.8em;margin-bottom:4px;">                           
+                13 ⇝ 25/10/2014
+            </div>
+
+
+            <div class="dates" style="clear:both;font-size: 0.8em;">                           
+
+            Installations – Performances – Création théâtre – Print party – Concerts
+		</div>
+        </div>
+        
+
+
+
+
+        <article id="edito" class="chant">
+                <h1 style="margin-bottom: 7px;">NOS PETITES MADELEINES</h1>
+
+<!-- <img src="images/madeleines/madeleines-oiseau.gif" style="width:100px;" /> -->
+<!-- <img src="images/madeleines/madeleines-oiseau-spiro.gif" style="width:100px;" /> -->
+
+                <blockquote>                           
+                    « Désencombrer la toile du déjà-vu. » Francis Bacon
+                </blockquote>
+                    <p style="text-align: left;">
+                         Du 13 au 25 octobre, le temps d’un festivalissime  rendez-vous, la Balsa se transformera en « palais de la mémoire ».  Voyez-vous cette zone si particulière de notre cerveau où l’ordre,  l’association et la répétition font bon ménage. L’art éphémère, pratique  d’art contemporain parmi d’autres, semble être le reflet d’une société  qui prône l’accélération du temps. En pointant cette mouvance, en la  décortiquant, on lui donne du sens, une sorte de méthode de lecture pour  comprendre la tension entre l’art qui se fait et son rôle de témoin,  entre la création et la conservation de la trace. Alors mettez votre  mémoire à l’épreuve, à la croisée du dit et du non-dit, de l’individuel  et de l’institutionnel, du refoulé et du cons-<br/>cient, venez savourer nos  petites madeleines, venez déguster nos petits récits afin de vous  réapproprier l'imaginaire, préfigurer des conduites à venir, déjouer les  questions convenues, et ce, en donnant naissance à des mythes  libérateurs, en forgeant des histoires inspirantes.
+                    </p>
+                    <div style="padding: 0.4em 0em 0.1em 1em;">
+		                <dl class="bible">
+		                   <dd>Monica Gomes et Fabien Dehasseler</dd><br/>
+		                  <dt>Direction artistique</dt>
+		               </dl>
+				</div>
+        </article>
+
+    <!-- PAGE 3 -->        
+        <article id="sommaire">
+
+    <h1>NOS PETITES MADELEINES</h1>
+        
+    <div class="spectacle-infos madeleines partie" style="margin-top:0px; border-top: 0px; border-bottom: 0px;">
+            <em style="text-transform:uppercase; border-bottom: 0px;">
+            du 13 au 25 OCTOBRE 2014
+            </em>
+        </div>
+        
+        <div class="region-break">&nbsp;</div>
+        
+        <div class="spectacle-infos madeleines dates">
+	        lundi 13 ⇝ vendredi 17
+        </div>
+
+<div class="spectacle-texte liste">
+        <div class="liste">
+            <em class="piece-madeleine">Lungs [the breather]<sup>*</sup></em><br/>
+            de 19h à 20h — Foyer
+        </div> 
+        
+        <div class="separateur"> &#119100; </div> 
+                
+        <div class="liste">
+            <em class="piece-madeleine"">Skinstrap<sup>*</sup></em><br/>
+            à 20h30 — Studio
+        </div> 
+        
+        <div class="separateur"> &#119100; </div> 
+        
+        <div class="liste">
+            <em class="piece-madeleine"">Dualskin<sup>*</sup></em><br/>
+            à 21h30 — Studio
+        </div> 
+</div>
+        
+        <div class="spectacle-infos madeleines dates">
+             samedi 18
+         </div>
+     
+<div class="spectacle-texte liste">
+        <div class="liste">
+            <em class="piece-madeleine">Lungs [the breather]<sup>*</sup></em><br/>
+            de 15h à 17h15 — Foyer
+        </div> 
+        
+        <div class="separateur"> &#119100; </div> 
+        
+        <div class="liste">
+            <em class="piece-madeleine">Hachures tourneurs<sup>*</sup></em><br/>
+            à 17h30 — Foyer
+        </div>
+          <div class="notes-quinzaine">
+        <sup>*</sup> dans le cadre de la <b>Quinzaine numérique 2014</b>
+    </div>
+</div>
+
+
+    
+    
+        <div class="region-break">&nbsp;</div>
+        
+        <div class="spectacle-infos madeleines dates">
+             lundi 20 & mardi 21                    
+        </div>
+        
+<div class="spectacle-texte liste">
+        <div class="liste">
+            <em class="piece-madeleine">Le nu civil</em><br/>
+            à 20h30 — Amphithéâtre
+        </div>
+</div>
+        <div class="spectacle-infos madeleines dates">
+            mercredi 22 & jeudi 23                   
+         </div>
+<div class="spectacle-texte liste">
+        <div class="liste">
+            <em class="piece-madeleine">Vieil</em><br/>
+            à 20h30 — Foyer 
+        </div>
+</div>
+
+            <div class="spectacle-infos madeleines dates">
+            vendredi 24                    
+         </div>
+<div class="spectacle-texte liste">
+        <div class="liste">
+            <em class="piece-madeleine">Vieil</em><br/>
+            à 20h30 — Foyer 
+        </div>
+        
+        <div class="separateur"> &#119100; </div> 
+        
+        <div class="liste">
+            <em class="piece-madeleine">Joy</em><br/>
+            22h — Amphithéâtre<br/> 
+        </div>
+</div>
+
+        <div class="region-break">&nbsp;</div>
+        
+        
+        <div class="spectacle-infos madeleines dates">
+             samedi 25                   
+        </div>
+<div class="spectacle-texte liste">
+        <div class="liste">
+            <em class="piece-madeleine">Human Brush</em><br/>
+            à 20h30 — Amphithéâtre 
+        </div>
+        
+        <div class="separateur"> &#119100; </div> 
+        
+        <div class="liste">
+            <em class="piece-madeleine">Ext'int - Lazarine (expérience)  </em><br/>
+            22h — Amphithéâtre
+ 
+        </div>
+</div>
+               <img src="images/madeleines/madeleines-oiseau-spiro-num.svg" style="width: 375px;margin-left : -44px;margin-top: 27px;">
+     
+  
+
+        </article>
+        
+        
+        <!-- PAGE 4 -->        
+        <article id="lungs">
+            <div id="logos" style="margin-bottom: 1.2em;">
+                 <img class="quinzaine" style="width: 32px; margin-top: 6px;" src="logos/15-num-coul-nb.png" />
+            </div>
+            <div class="artiste">Laura Colmenares Guerra & Todor Todoroff</div>
+            <h1>Lungs [the breather]</h1>
+            <div class="type">Installation</div>
+
+                
+            <div class="dates">  
+                13 ⇝ 17/10/2014 <br/>
+                de 19h à 20h<br/>
+                et le 18/10/2014<br/>
+                de 15h à 17h15   <br/>
+                &#119056; <br/>
+                Foyer<br/> 
+                Attention jauge très réduite<br/>
+                Inscription obligatoire                      
+            </div>
+            
+               <img src="images/madeleines/madeleines-elephant.gif" style="width: 90px;">
+            
+            <div class="region-break">&nbsp;</div>
+
+                <p>   
+                     <em class="piece">Lungs [the breather]</em>  est une installation interactive et immersive, qui explore les  processus corporels involontaires. L'expérience commence quand les  participants entrent dans l'espace de l'installation et s'assoient sur  l'une des pierres. Un masque est disposé derrière chacune de celles-ci.  Tous les participants prennent alors un masque et commencent à respirer  dans celui-ci. Cette respiration provoque une réponse auditive et  visuelle immédiate.
+                </p>
+             
+                <div class="production">
+                     <em class="piece">Lungs [the breather]</em> a reçu les soutiens à la  production du Vlaamse Overheid et à la promotion de la Fédération  Wallonie-Bruxelles: secteur des Arts numériques et les soutiens de  ARTeM, Nadine et Foam.
+                </div>
+
+        </article>
+               
+
+<!-- <img src="images/madeleines/madeleines-elephant-tete-spiro-num.gif" style="width: 100px;"> -->
+
+         
+          <!-- PAGE 5 -->        
+        <article id="skinstrap"> 
+                  <div id="logos" style="margin-bottom: 1.2em;">
+                   <img class="quinzaine" style="width: 32px; margin-top: 6px;" src="logos/15-num-coul-nb.png" />
+              </div>
+              
+             <div class="artiste">Thomas Israël</div>
+            <div class="type">Performance théâtre - Vidéo</div>
+             
+            <div class="dates">  
+                13 ⇝ 17/10/2014 &#119056;
+                Studio
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 8px;"> 
+	            <div class="dates" style="display: inline;">  
+	                à 20h30 ⇝
+	            </div>
+
+	            <h1 style="display: inline;">Skinstrap</h1>
+	     </div>       
+
+            <p style="letter-spacing: -0.1px;">   
+                 Thomas Israël utilise son corps comme écran afin de nous raconter une  histoire universelle de la couleur, suivi d'une auto-fiction à même la  peau. Les théma&shy;tiques chères à l'artiste - telles que la mémoire du  corps, l'inconscient, le rap&shy;port au temps - sont traitées avec poésie  dans un dispositif unique en son genre.
+        </p>
+                <dl class="bible">                          
+                    <dt>PERFORMANCE, POÉSIE, VOIX-OFF ET VIDÉO</dt> <dd>Thomas Israël</dd>
+                    <dt>MUSIQUE ORIGINALE</dt> <dd>Gauthier Keyaerts</dd>
+                    <dt>CACHE INTERACTIF</dt> <dd>Yacine Sebti</dd>
+                    <dt>VIDÉO ADDITIONNELLE</dt> <dd>Laurent Dwek</dd>
+                    <dt>RÉGIE</dt> <dd>Colin Childz</dd>
+                </dl>
+
+                      <div class="region-break">&nbsp;</div>
+
+
+            <div style="text-align: center; margin-bottom: 8px;"> 
+	             <div class="dates" style="display: inline;">  
+		                à 21h30 ⇝
+	            </div>
+	             <h1 style="display: inline;">Dualskin <!--<span style="text-transform: uppercase;  font-size: 0.6em;">Anamnèse d'une rencontre  amoureuse</span>--></h1>       
+	     </div>       
+	
+	
+             <p> 
+                  Petit historique humoristique de la sociologie du couple,  sorte d'étude des genres sous forme de strip-tease spirituel. Le corps est utilisé comme espace narratif, mais c'est  la dualité masculin-féminin qui est explorée.
+            </p>         
+
+          <dl class="bible">                          
+              <dt>PERFORMANCE ET ÉCRITURE</dt> <dd>Thomas&nbsp;Israël et Chloé Winkel</dd>
+              <dt>TEXTE ADDITIONNEL</dt> <dd>Aurélie Ghislain</dd>
+              <dt>VIDÉO</dt> <dd>Thomas Israël</dd>
+              <dt>MUSIQUE ORIGINALE</dt> <dd>Gauthier Keyaerts</dd>
+              <dt>CACHE INTERACTIF</dt> <dd>Yacine Sebti</dd>
+              <dt>COSTUME</dt> <dd>Isabelle Airaud</dd>
+              <dt>CONSEIL ARTISTIQUE</dt> <dd>Kika Nicolela</dd>
+              <dt>RÉGIE</dt> <dd>Colin Childz</dd>
+          </dl>
+
+
+          <div class="production">
+               Production In Progress asbl en coproduction avec le Théâtre la Balsamine, avec  les soutiens du&nbsp;C.I.A.S de la Fédération Wallonie-Bruxelles, de l'Agence  Wallonie-Bruxelles Théâtre/Danse et&nbsp;avec&nbsp;la participation du Centre des  Arts Scéniques.
+          </div>
+
+        </article>
+        
+
+
+        
+    <!-- PAGE 6 -->        
+        <article id="osp"> 
+            <div id="logos" style="margin-bottom: 1.2em;">
+                 <img class="quinzaine" style="width: 32px; margin-top: 6px;" src="logos/15-num-coul-nb.png" />
+            </div>
+            
+            <div class="artiste">Open Source Publishing (OSP)</div>
+            <h1>HACHURES TOURNEURS</h1>
+            <div class="type">Print party</div>
+
+            
+            <div class="dates">  
+                18/10/2014 <br/>
+                à 17h30<br/>
+                &#119056; <br/>
+                Foyer<br/> 
+                Entrée libre <br/>
+                Réservation souhaitée<br />
+                &#119056; <br/>         
+            </div>
+            
+           <dl class="bible">                          
+               <dt>Avec</dt> <dd>Gijs&nbsp;de&nbsp;Heij, Pierre&nbsp;Huyghebaert, Ludivine&nbsp;Loiseau,  Sarah&nbsp;Magnan, Colm&nbsp;O'Neill</dd>
+              <dt>Invité</dt> <dd>Antonio&nbsp;Roberts</dd>
+
+          </dl>       
+          
+                      <div class="region-break">&nbsp;</div>
+          
+        <!--    <img src="images/madeleines/madeleines-elephant-tete-7000.gif"  style="width: 100px;"> -->
+
+
+            <p>   
+                  Cette performance est une belle opportunité pour  rencontrer les graphistes qui travaillent depuis maintenant trois  saisons à l'identité graphique de la Balsamine. Les Print Party OSP sont  des performances participatives où les logiciels et machines libres  chauffent autour d'une table de cuisine. Avec en bagage <em class="piece">Seoul Font  Karaoké</em> et <em class="piece">Bits and sounds</em> de la <em class="piece">Relearn Summer School</em>, OSP  remouline la partition graphique de la saison pour la  trans&shy;former en instruments de musique. Comment réconcilier  l'écriture et le chant, traduire un pixel en beat, une courbe  vectorielle en ligne de basses ?
+            </p>
+            
+         </article>
+        
+        
+        
+    <!-- PAGE 7 -->        
+        <article id="nu-civil"> 
+
+            <div class="artiste">Jean-Baptiste Calame</div>
+            <h1>LE NU CIVIL</h1>
+            <div class="type">Théâtre</div>
+            
+            <div class="dates">  
+                20 ⇝ 21/10/2014 <br/>
+                20h30<br/>
+                &#119056; <br/>
+                Amphithéâtre<br/> 
+			&#119056; <br/>
+            </div>
+            
+
+                <dl class="bible">                          
+                <dt>Texte</dt> <dd>Jean-Baptiste&nbsp;Calame</dd><br/>
+                 <dt>Mise en scène</dt>  <dd>Jean-Baptiste&nbsp;Calame et  David&nbsp;Lerquet</dd><br/>
+                 <dt>Avec</dt> <dd>Céline&nbsp;Beigbeder,  Lucie&nbsp;Debay, Arthur&nbsp;Egloff, Emile&nbsp;Falk-Blin,  Réhab&nbsp;Mehal, Morgane&nbsp;Naas, Céline&nbsp;Ohrel,  Sophie&nbsp;Sénécaut</dd>                            
+                    </dl>
+
+                      <div class="region-break">&nbsp;</div>
+
+            <p>   
+                  C'est le matin, le sommeil est passé faire son tri. Les  protagonistes sont propres et démarrent la journée avec un petit  déjeuner solide. Mais voilà qu'au&shy;jour&shy;d'hui la  popu&shy;lation civile apparaît un peu dissipée&thinsp;; cer&shy;taines  personnes perdent leurs mots, d'autres leurs cheveux&thinsp;; quel&shy;que chose  dans l'air semble agir au niveau atomique&thinsp;; rien de spectaculaire&thinsp;;  plutôt quelque chose comme un lent incendie sans fumée. Une sorte de «&thinsp;masse&thinsp;» envahit l'espace public, elle semble y brûler ses calories.  Est-ce une simulation&thinsp;? Une réalité&thinsp;? <!-- Nos protagonistes doivent-ils  prendre des mesures&thinsp;? Écouter leurs cœurs&thinsp;?--> Une&nbsp;chose est sûre&thinsp;: ici,  mieux vaut ne rien savoir.
+            </p>  
+
+
+            <div class="production" >
+                 Co-production Les Viandes magnétiques avec le Théâtre la  Balsamine. Avec le soutien du BRASS-Centre Culturel de Forest ainsi que de Charles Spapens,  Échevin  de la Culture, au nom du Collège  des Bourgmestre et Échevins de Forest.
+            </div>
+            
+        
+        </article>  
+        
+        
+    <!-- PAGE 8 -->        
+        <article id="vieil"> 
+            <div id="logos" style="margin-bottom: 1.2em;">
+                 <img class="quinzaine" style="width: 32px; margin-top: 6px;" src="logos/15-num-coul-nb.png" />
+            </div>
+
+            <div class="artiste">Jean&nbsp;Le&nbsp;Peltier</div>
+            <h1>VIEIL</h1>
+            <div class="type">Théâtre</div>
+            
+            
+            <div class="dates">  
+                22 ⇝ 24/10/2014 <br/>
+                à 20h30<br/>
+                &#119056; <br/>
+                Foyer —
+                40 min <br />
+                &#119056; <br/>
+            </div>
+
+                        <dl class="bible">                          
+                        <dt>CRÉATION ET INTERPRÉTATION</dt> <dd>Jean&nbsp;Le&nbsp;Peltier</dd>
+                        </dl>
+                        <img src="images/images-programme/dessin-jean-le-peltier.gif"  style="width: 85px;text-align:center;">
+
+
+		<div class="region-break">&nbsp;</div>
+
+            <p>   
+                  Une fable entre western et conte fantastique qui se  raconte et se dessine à la fois. Un comédien, d'abord seul, entouré de  blanc, avec près de lui une petite musique d'harmonium, illustre au  fusain ce qu'il raconte. Il nous parle d'un vieux continent, comme d'un  vieux géant, d'un vieil ami qu'on admire sans pouvoir ignorer tous ses  défauts. Dans <em class="piece">Vieil</em> il y a un géant  blessé à la clavicule, une maison en bois de sapins, un hibou grincheux,  une vieille dame et un jeune homme amoureux. Dans <em class="piece">Vieil</em>, il y a une  jeunesse, une fraîcheur imparable qui donne à ce spectacle un âge d'or  intemporel.
+            </p>                              
+
+                        <div class="production">
+                            Production Label RITA, réalisé avec l’aide de la Fédération Wallonie-Bruxelles–Service du Théâtre.
+                        </div>
+
+        </article>    
+        
+          
+        <!-- PAGE 9 -->                  
+        <article id="joy"> 
+
+
+
+            <div class="artiste">JOY</div>
+            <h1>ALL THE BATTLES </h1>
+            <div class="type">Concert</div>
+            
+            
+            <div class="dates">  
+                24/10/2014 <br/>
+                à 22h<br/>
+                &#119056; <br/>
+               Amphithéâtre<br/>
+               &#119056; <br/>
+            </div>
+
+            <dl class="bible">                          
+                <dt>Label</dt> <dd>Caramel Beurre Salé</dd>
+                <dt>Distribution</dt> <dd>Pias</dd>
+            </dl>
+            
+		<div class="region-break">&nbsp;</div>
+            <p>   
+			Avec  Venus, groupe majeur des années 2000, Marc Huyghens s'était joué des  codes en introduisant des instruments atypiques, une dimension théâtrale  et en s'imposant avec le désormais classique « Beautiful Days ». Après  la dissolution de Venus, il crée JOY avec la chanteuse et  percussionniste Françoise Vidick, formant avec elle un duo fusionnel en  for'm d'oxymore et qui n'a de cesse de chercher le contrechant. Et aujourd'hui avec Katel, chanteuse,  guitariste et bassiste, pour une nouvelle forme jouant définitivement  avec les ruptures.
+			
+			En mêlant l'ossature organique et  lyrique de Marc Huyghens, la chair des riffs incisifs de Katel, et les  peaux violentes ou caressantes des batteries de Françoise Vidick. Et en  mêlant surtout ces trois voix singulières qui savent tour à tour prendre  leur liberté pour ne faire plus qu'une. 
+            </p>                              
+
+
+        </article>        
+
+
+
+    <!-- PAGE 10 -->        
+        <article id="human-brush"> 
+        
+            <div class="artiste">Vincent&nbsp;Glowinski
+            & Jean-François&nbsp;Roversi </div>
+            <h1>Human Brush</h1>
+            <div class="type">Performance de danse, dessin et musique improvisée</div>
+            
+            <div class="dates">  
+                25/10/2014 <br/>
+               à 20h30<br/>
+               &#119056; <br/>
+               Amphithéâtre <br/>
+              &#119056; <br/>
+               à 22h<br/>
+               Ext'int - Lazarine<br/>
+               Live électronique <br />
+                  &#119056; <br/>
+            </div>
+
+
+            <dl class="bible">                          
+                <dt>DESSIN et DANSE</dt> <dd>Vincent Glowinski</dd>
+                <dt>VIDÉO</dt> <dd>Jean-François Roversi</dd>
+                <dt>musique électronique</dt> <dd>Tzii</dd>
+            </dl>
+
+		<div class="region-break">&nbsp;</div>
+				
+<!-- <img src="images/madeleines/madeleines-tombe1.gif"  style="width: 80px;"> -->
+
+            <p>   
+                  Depuis 2008, le street artiste Vincent Glowinski (aka  Bonom) travaille avec l'artiste des médias Jean-François Roversi à une  transposition performative de ses fresques de rue. Dans <em  class="piece">Human Brush</em> c'est l'empreinte du corps  lui-même qui induit les formes représentées. Ainsi sont explorés des  univers graphiques variés dont les composantes évoquent tour à tour  l'imagerie scientifique, des figures mythologiques, de l'infiniment  petit vers les grands espaces insondables du cosmos…
+            </p>
+            <div class="production">
+                Soutien: Ultima Vez, Les Brigittines, Cinéma Nova, KunstenFestivalDesArts <br/>
+                 Production/Diffusion:  Entropie Production // Pierre-Laurent Boudet 
+           </div>
+
+        </article> 
+
+<!-- PAGE 11 -->
+<article id="infos-pratiques">
+    <!-- <img src="images/madeleines/madeleines-defense.gif" style="width: 500px;" /> -->
+    
+    <h3 style="margin-top:0px;">Infos et réservations</h3>
+    <div class="resa" style="margin-top:10px;">Via notre site internet: <a href="http://www.balsamine.be">www.balsamine.be</a> (réservation possible 24h/24)</div>
+    <div class="separateur">&#119100; </div>
+     <div class="resa">Au <b>02 735 64 68</b>. Du lundi au  vendredi, de 14h à 18h. En dehors de ces horaires, un répondeur prend  les réservations 24h/24.</div>
+    <div class="separateur">&#119100; </div>
+    <div class="resa" style="letter-spacing: -0.2px;">Par email: <a href="mailto:reservation@balsamine.be">reservation@balsamine.be</a></div>
+    
+
+     <div id="restauration" style="border-top: 1px solid black;  border-bottom: 1px solid black; padding: 0.5em 0; margin-top: 10px;">
+        <h3 style="margin-top:0px;margin-bottom:10px;line-height: 1em;">Bar et restauration</h3>
+        <p>
+             Le bar est ouvert 1h30 avant chaque représentation. Une  restauration paysanne, diversifiée et faite maison vous est proposée  avant et après chaque spectacle.
+        </p>
+    </div>
+    
+    <div class="region-break">&nbsp;</div>
+     <h3>Prix des places</h3>
+        <div class="notes-in">Prix pour la soirée.</div>
+
+    
+    <div class="pratique1"  valign="middle">Tarif plein </div>
+    <div class="pratique2" valign="middle">15 € — Prévente 12 €</div>
+    <div class="pratique1"  valign="middle">Tarifs réduits* </div>
+    <div class="pratique2" valign="middle">9 € — Prévente 6 €</div>
+    
+
+     <div class="pratique3" colspan="4" valign="middle"  style"text-align:left;">*étudiants, +de 60 ans, demandeurs d'emploi,  professionnels du spectacle, schaerbeekois</div>
+    
+    
+    <div class="pratique1"  valign="middle">Tarif étudiants en école supérieure artistique</div>
+    <div class="pratique2" valign="middle">5 €</div>
+                
+    
+    <div class="pratique1" style="border-top: 1px solid black;">Art. 27 et Arsène 50</div>
+
+    <div class="region-break">&nbsp;</div>
+    <h3>Nos Pass </h3>
+    
+     <div class="notes" >
+         Les pass sont nominatifs. Réservation des places à tout moment sous réserve des places disponibles. La personne  accompagnant le détenteur d'un Pass bénéficie du tarif réduit 9€ /  prévente 6€.
+    </div>
+
+    <div class="pratique1" style="margin-top:0px;">Pass Nos petites Madeleines</div>
+    <div class="pratique2"  style="letter-spacing: -0.5px;">Tarif plein 27 € &#119100; Tarif réduit 18 € </div>
+    <div class="pratique2">Tarif étudiants en art 15 € </div>
+    
+    <div class="pratique1">Pass quand tu veux<br/>
+         <span style="text-transform: initial; font-size: 13px;">donne  accès aux 15&nbsp;spectacles de la saison (hors Noël au  théâtre)</span>
+    </div> 
+    <div class="pratique2" style="letter-spacing: -0.5px;">Tarif plein 70 € &#119100;  Tarif réduit 50 €</div>        
+    <div class="pratique2">Tarif étudiants en art 40 € </div>
+</article>
+
+
+    <article id="cover4">
+    
+                <img id="photo" src="images/madeleines/memories-laidout.svg" style="width:318px; float: left;">
+    
+    
+    <p id="address">
+    Théâtre la Balsamine<br/>
+    Avenue Félix Marchal, 1<br/>
+    1030 Bruxelles<br/>
+    Réservations <br />
+  02 735 64 68<br />
+    www.balsamine.be
+    </p>
+    
+    
+    <div id="logos">
+                <img style="width: 45px; margin: 5px 2px; margin-top: 6px;" src="logos/fede-wallonie-bruxelles.svg">
+                <img style="width: 35px; margin: 5px 2px;" src="logos/culture-be.svg">
+                <img style="width: 25px; margin: 5px 2px;" src="logos/cocof.svg">
+                <img style="width: 45px; margin: 5px 2px;" src="logos/wbi.svg">
+                <img style="width: 35px; margin: 5px 2px;" src="logos/wbtd.svg">
+                <img style="width: 33px; margin: 5px 0px 5px 0px;" src="logos/loterie.svg">
+                <img style="width: 50px; margin: 5px 0px 5px 0px;" src="logos/arts-sceniques.svg">
+                <img style="width: 30px; margin: 5px 0px;" src="logos/article27.svg">
+                <img style="width: 32px; margin: 5px 0px;" src="logos/arsene50.svg">
+                <img style="width: 32px; margin: 5px 0px;" src="logos/musiq3.svg">
+                <img style="width: 32px; margin: 5px 0px;" src="logos/mediatheque.svg">
+        <img style="width: 32px; margin: 5px 0px;" src="logos/point-culture.svg">
+        <img style="width: 32px; margin: 5px 0px;" src="logos/15-num-coul-nb.png">
+        <img style="width: 32px; margin: 5px 0px;" src="logos/rtbf.svg">
+
+
+
+
+            </div>
+    
+    
+    
+    <div class="avant-bible">
+        <dl class="bible">
+           <dt>Éditeur responsable</dt>
+          <dd>Fabien&nbsp;Dehasseler — Avenue Félix Marchal, 1 — 1030 Bruxelles</dd>
+          <dt>Photographie</dt>
+          <dd>Hichem&nbsp;Dahes</dd>
+          <dt>Design graphique</dt>
+           <dd>Open Source Publishing &#119056;  Sarah&nbsp;Magnan, Stéphanie&nbsp;Vilayphiou,  Ludi&nbsp;Loiseau, Pierre&nbsp;Huyghebaert</dd>
+            <dt>Fichiers disponibles</dt><dd> sous licence art libre sur osp.constantvzw.org/work/balsamine.2014-2015</dd>       
+            <dt>Impression</dt>
+            <dd>Imprimerie Gillis, Bruxelles</dd>
+        </dl>
+    </div>
+</article>
+
+            
+    </section>
+    
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="lib/popelt-v1.0.min.js"></script>
+    <script type="text/javascript" src="lib/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="print.js"></script>
+</body>
+</html>
+
