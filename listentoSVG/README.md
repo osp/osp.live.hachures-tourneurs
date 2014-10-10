@@ -8,7 +8,7 @@ A script to listen to an SVG basde on its curves
 
 ## Usage
 - Launch osc.pd and turn on sound processing (Ctrl + L)
-- Open lisetntoSVG.pde in Processing
+- Open lisetntoSVG.pde in Processing (required Processing libraries oscP5 & geomerative)
 - Place an SVG file named "image.svg" into the data folder
 - Run the Processing sketch
 
