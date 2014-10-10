@@ -1,6 +1,6 @@
-#N struct 1019-symarray float x array symbols 1019-sym;
-#N struct 1019-sym symbol name float on;
-#N canvas 348 92 931 994 10;
+#N struct 1020-symarray float x array symbols 1020-sym;
+#N struct 1020-sym symbol name float on;
+#N canvas 345 97 931 994 10;
 #N canvas 0 85 1920 995 reserch 0;
 #X msg 1226 512 add2 \$1;
 #X msg 1207 548 84 105 109;
@@ -177,6 +177,8 @@
 #X obj 230 559 simpleosc;
 #X obj 246 599 simpleosc;
 #X obj 261 639 simpleosc;
+#X msg 486 379 \; pd dsp 1;
+#X obj 486 359 loadbang;
 #X connect 2 0 1 0;
 #X connect 3 0 13 0;
 #X connect 3 0 43 0;
@@ -245,3 +247,4 @@
 #X connect 44 0 42 0;
 #X connect 45 0 44 0;
 #X connect 46 0 36 0;
+#X connect 61 0 60 0;
