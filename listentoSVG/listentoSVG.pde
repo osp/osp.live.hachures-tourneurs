@@ -21,7 +21,7 @@ float pl = 4.0; // maximum segments length
 
 void setup() {
   // Initilaize the sketch
-  size(400, 400);
+  size(1024, 768);
   frameRate(120);
   ve= new ArrayList();
 
