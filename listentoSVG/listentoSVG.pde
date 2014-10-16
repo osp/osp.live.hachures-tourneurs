@@ -14,6 +14,7 @@ String svgFile;
 ArrayList ve;
 int nve = 1;
 int colo;
+int record = 1;
 
 // global params
 float pl = 4.0; // maximum segments length
@@ -22,7 +23,7 @@ float pl = 4.0; // maximum segments length
 void setup() {
   // Initilaize the sketch
   size(1024, 768);
-  frameRate(120);
+  frameRate(220);
   ve= new ArrayList();
 
   // start oscP5, telling it to listen for incoming messages at port 5001 */
@@ -59,17 +60,42 @@ void draw() {
       float okx = (((Point) ve.get(nve)).x);
       float oky = (((Point) ve.get(nve)).y);
 
+      /* create an osc bundle */
+      OscBundle myBundle = new OscBundle();
+
+      OscMessage start = new OscMessage("/start");
+      start.add(record);
+
       OscMessage myMessagex = new OscMessage("/x");
+      myMessagex.add(okx); // add a string to the osc message
+
       OscMessage myMessagey = new OscMessage("/y");
-      myMessagey.add(okx); // add a string to the osc message
-      myMessagex.add(oky); // add a string to the osc message
+      myMessagey.add(oky); // add a string to the osc message
+
+      myBundle.add(myMessagex);
+      myBundle.add(myMessagey);
+      myBundle.add(start);
 
       // send the message
-      oscP5.send(myMessagex, myRemoteLocation);
-      oscP5.send(myMessagey, myRemoteLocation);
+      oscP5.send(myBundle, myRemoteLocation);
     }
     nve++;
   } else { // restart drawing
+
+    /* stop recording */
+    int record = 0;
+
+    OscBundle myBundle = new OscBundle();
+
+    OscMessage start = new OscMessage("/start");
+    start.add(record);
+
+    myBundle.add(start);
+
+    // send the message
+    oscP5.send(myBundle, myRemoteLocation);
+
+
     delay(3000);
     background(255);
     nve = 1;
