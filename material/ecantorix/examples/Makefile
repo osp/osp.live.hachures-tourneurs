@@ -1,10 +1,11 @@
 ECANTORIX = ../ecantorix.pl
 
 ALL = \
-      entchen-osp.wav \
-      entchen.wav \
+      apres.wav \
       overture.wav \
-      overture-osp2.wav \
+      overture-osp.wav \
+      entchen.wav \
+      entchen-osp.wav \
       
 all: $(ALL)
 
