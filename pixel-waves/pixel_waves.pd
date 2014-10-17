@@ -1,4 +1,4 @@
-#N canvas 426 486 430 366 10;
+#N canvas 1023 520 430 366 10;
 #X obj 23 291 cnv 15 165 55 empty empty empty 20 12 0 14 -257985 -66577
 0;
 #X text 32 316 http://hellocatfood.com;
@@ -56,7 +56,7 @@
 #X connect 22 1 27 0;
 #X coords 0 -1 1 1 150 100 1 200 40;
 #X restore 24 16 pd loadimage;
-#N canvas 57 87 931 998 pixelinfo 0;
+#N canvas 57 92 931 998 pixelinfo 0;
 #X obj 29 112 f;
 #X obj 69 112 + 1;
 #X obj 29 184 %;
@@ -138,7 +138,7 @@
 #X connect 28 0 27 0;
 #X coords 0 -1 1 1 150 130 1 400 300;
 #X restore 22 139 pd pixelinfo;
-#N canvas 1076 309 450 300 start 0;
+#N canvas 1070 319 450 300 start 0;
 #X obj 150 20 cnv 15 130 90 empty empty empty 20 12 0 14 -260097 -66577
 0;
 #X obj 156 27 tgl 30 0 empty empty start/record 40 15 0 10 -4034 -1
@@ -168,7 +168,7 @@
 #X connect 12 0 1 0;
 #X coords 0 -1 1 1 130 90 1 150 20;
 #X restore 294 16 pd start;
-#N canvas 994 462 450 300 audio 0;
+#N canvas 991 467 450 300 audio 0;
 #X obj 280 10 cnv 15 150 220 empty empty empty 20 12 0 14 -261682 -66577
 0;
 #X obj 31 116 r r;
