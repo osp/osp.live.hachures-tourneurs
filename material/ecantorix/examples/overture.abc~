@@ -1,0 +1,114 @@
+X: 1
+T: from 01-overture.mid
+M: 4/4
+L: 1/8
+Q:1/4=104
+K:Bb % 2 flats
+% control track
+% creator: 
+% GNU LilyPond 2.16.1           
+V:1
+% up:One
+%%MIDI program 6
+%%MIDI program 6
+% harpsichord
+% control track
+% creator: 
+% GNU LilyPond 2.16.1           
+[g3d3B3][bfB] [b2f2B2] [af-d-][gfd]| \
+[g2e2B2] [d2G2D2] [d3A3D3][c_GD]| \
+[B3=G3D3][AGE] [A2-G2D2] [A_G-C-][=G_GC]| \
+[=G3D3B,3]A B3/2c/2 de|
+[f3c3][gG] [_g2d2-] [=g2d2]| \
+[a2d2] d2- [b2-d2] [bc-][ac]| \
+[g2-d2] [gc-][fc] [=eB-][fB] [dG-][=eG]| \
+[_d2A2] A2 [f3A3-][fA]|
+[f3B3-][=eB] [=e2-A2] [=eG-][=dG]| \
+[d8A8_G8]| \
+M: 6/8
+L: 1/8
+ddd c/2B/2A/2B/2c/2d/2| \
+B/2A/2=G/2A/2B/2c/2 d/2c/2d/2_e/2f/2d/2|
+g/2f/2g/2b/2a/2g/2 _gAd| \
+B2x e/2f/2e/2d/2c/2B/2| \
+Aff e/2d/2c/2d/2e/2f/2| \
+d/2c/2B/2c/2d/2e/2 f2x|
+e2x d2x| \
+=g/2f/2e/2f/2g/2a/2 f/2e/2d/2e/2f/2g/2| \
+e/2d/2c/2d/2e/2f/2 d/2c/2B/2c/2d/2e/2| \
+e/2d<cB/2 B2x|
+xff e/2d/2c/2d/2e/2f/2| \
+ggg f/2=e/2d/2=e/2f/2g/2| \
+a2a dg2-| \
+g/2a/2f/2=e/2f/2g/2 =eaa|
+a6-| \
+a6-| \
+a/2g/2f/2=e/2f/2d/2 b/2a/2g/2f/2=e/2g/2| \
+a/2g/2f/2=e/2d/2f/2 g/2f/2=e/2d/2_d/2=e/2|
+f/2=e/2f/2g/2a/2b/2 g/2f<=e=d/2| \
+ddd c/2B/2A/2B/2c/2d/2| \
+B/2A/2G/2A/2B/2c/2 Add| \
+_e/2d/2c/2d/2e/2f/2 d/2c/2B/2c/2d/2e/2|
+c/2B/2A/2B/2c/2d/2 B/2A/2B/2c/2d/2B/2| \
+e/2f/2e/2d/2c/2B/2 A/2G/2A/2B/2c/2A/2| \
+d/2c/2d/2=e/2f/2g/2 =e/2d/2=e/2_g/2=g/2a/2| \
+_gda b3|
+x2a _gd=g| \
+_ecf dBe| \
+c/2B/2A/2B/2c/2d/2 B/2A/2B/2c/2d/2e/2| \
+c/2B<AG/2 [G3D3B,3]|
+V:2
+% down:One
+%%MIDI program 6
+%%MIDI program 6
+% harpsichord
+% control track
+% creator: 
+% GNU LilyPond 2.16.1           
+[D3B,3G,3][DB,D,] [D2B,2D,2] [F2D2]| \
+[G2E2] [B,2G,2] [A,3_G,3][A,D,]| \
+[B,3=G,3][CC,] [D2D,2] [D,2D,,2]| \
+[G,6G,,6] [B,2G,2]|
+[C3A,3][DB,] [C2A,2] [B,2G,2]| \
+[A,2_G,2-] [D2_G,2] [B,2=G,2] [C2A,2]| \
+B,2 [C2A,2] [D2-G,2] [D2B,2]| \
+[=E2-A,2] [=E2G,2] [D2-F,2] [D2D,2]|
+[D4G,4] [_D4A,4]| \
+[=D8A,8D,8]| \
+x6 x
+M: 6/8
+L: 1/8
+G/-1-| \
+G2G FFF|
+_EEE D/2C/2D/2=E/2_G/2D/2| \
+=G/2A/2G/2F/2_E/2D/2 CDE| \
+F3 GAF| \
+B,B,B A/2G/2F/2G/2A/2B/2|
+G/2F/2E/2F/2G/2A/2 F/2E/2D/2E/2F/2G/2| \
+ECE DB,G,| \
+CA,F, B,G,D,| \
+E,F,F,, B,,BB|
+A/2G/2F/2G/2A/2B/2 cCc| \
+B/2A/2G/2A/2B/2c/2 dDd| \
+c/2B/2A/2B/2c/2d/2 B/2A/2G/2A/2B/2c/2| \
+AdD [_d2A2]x|
+xAA F/2=E/2=D/2=E/2F/2G/2| \
+A/2G/2A/2=B/2_d/2A/2 =d/2_d/2=d/2D/2F/2G/2| \
+AdD GcC| \
+FA,_B, =E,G,A,|
+D,=E,F, G,A,A,,| \
+D,2x D,,2x| \
+D,2x D,B,G,| \
+CFF, B,DG|
+A,C_G =G,G/2F/2_E/2D/2| \
+C/2B,/2C/2D/2E/2C/2 FF/2E/2D/2C/2| \
+B,A,G, CB,A,| \
+D/2C/2D/2=E/2_G/2D/2 =G/2A/2G/2F/2_E/2D/2|
+C/2D/2C/2B,/2A,/2G,/2 D/2C/2B,/2A,/2B,/2G,/2| \
+C/2B,/2A,/2G,/2A,/2F,/2 B,/2A,/2G,/2A,/2B,/2G,/2| \
+A,_G,D, =G,A,B,| \
+CDD,2<G,,2|
+w: OSP écrit et dessine en utilisant uniquement des logiciels libres et open source. C'est une caravane de praticiens provenant de divers domaines. Ils conçoivent, programment, recherchent et enseignent. Travaillant pour le print, le web et ses croisements, OSP crée des identités visuelles et des services digitaux, creusant toujours vers une relation plus intime avec l'outil.
+Fondé en 2006 à Bruxelles dans le cadre de l'association Constant, Open Source Publishing rassemble 9 membres actifs. Venus de Belgique, de France et des Pays Bas ils sont installés depuis peu dans les espaces de l'ancien Hacker Space de Schaerbeek et publient l'ensemble de leurs fichiers à l'adresse suivante : osp.kitchen
+Les print party sont pour eux des terrains de rencontres avec un public plus grand, des moments où la mise à nu des outils rend concrète leur démarche et pratique la discussion. Initialement construites autour de l'impression d'un feuillet ou livret, ces performances participatives étaient d'abord l'occasion de raconter la découverte de nouveaux outils libres, une récente rencontre ou recherche. Avec toujours, au final, la production d'un support imprimé sur place, rassemblant les ingrédients de la présentation, laissant le public repartir en autonome, libre de rejouer l’événement — du manuel d'imposition permettant à chacun de construire un 16 pages, aux instructions pour faire chanter son ordinateur.
+Depuis le code et le papier se sont reconciliés et les print party osp s'étendent à d'autres surfaces, mais il s'agit toujours bien de fêter, de réceptionner ensemble cette tension de l'écriture à l'objet, du geste au code et de la recette à la bouche.

@@ -1,0 +1,3 @@
+$ESPEAK_VOICE = "fr";
+$ESPEAK_TRANSPOSE = -200;
+do 'extravoices/tremolo.inc';

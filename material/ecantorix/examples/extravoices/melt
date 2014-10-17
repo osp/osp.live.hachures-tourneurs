@@ -1,0 +1,22 @@
+// perl ../voiceshape/voiceshape.pl -P 440 -t 2 -f 1.25 -w 0.8 -c 0.6 -U 0 -R 0 -S 0 < /usr/share/espeak-data/voices/\!v/f1
+breath 0 0 0 0 0 0 0 0
+consonants 60 60
+echo 0 0
+flutter 0
+formant 0 143 80 150 0
+formant 1 150 80 180 0
+formant 2 125 70 150 187
+formant 3 143 70 150 0
+formant 4 137 80 150 0
+formant 5 137 90 150 0
+formant 6 131 80 150 0
+formant 7 137 70 150 0
+formant 8 137 70 150 0
+gender female 70
+language variant
+name female1
+pitch 440 440
+roughness 0
+stressAdd 0 0 0 0 0 0 0 0
+tone 1200 170 2400 135 4000 110
+voicing 100

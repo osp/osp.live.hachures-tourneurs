@@ -1,0 +1,36 @@
+X: 1
+T: from korean-song-short.mid
+M: 4/4
+L: 1/8
+Q:1/4=130
+K:D % 2 sharps
+% korean-song Pierre
+% Copyright 0xa9 
+V:1
+%%MIDI program 1
+% korean-song Pierre
+% Copyright 0xa9 
+X:0
+M:7/4
+L:1/4
+Q:180
+K:G
+V:1
+d2 c B2 A2|
+B2 c B A G2|
+G3 A3 B|
+c3 B2 B d|
+A3 A4|
+d2 c B4|
+d2 c B2 A2|
+B2 c B A G2|
+G3 A3 B|
+c3 B2 B d|
+A3 A4|
+A7|]
+V:2
+B2 A G2 D2|G2 G G2 D2|G3 G4|G3 G2 G2|D3 D4|G7|B2 A G2 D2|G2 G G2 D2|G3 G4|
+G3 G2 G2|D3 D4|E7|]
+w: OSP écrit et dessine en utilisant uniquement des logiciels libres et open source. C'est une caravane de praticiens provenant de divers domaines. Ils conçoivent, programment, recherchent et enseignent. Travaillant pour le print, le web et ses croisements, OSP crée des identités visuelles et des services digitaux, creusant toujours vers une relation plus intime avec l'outil.
+
+

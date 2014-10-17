@@ -1,6 +1,6 @@
-#N struct 1059-symarray float x array symbols 1059-sym;
-#N struct 1059-sym symbol name float on;
-#N canvas 897 90 931 994 12;
+#N struct 1019-symarray float x array symbols 1019-sym;
+#N struct 1019-sym symbol name float on;
+#N canvas 895 85 931 994 12;
 #N canvas 0 85 1920 995 reserch 0;
 #X msg 1226 512 add2 \$1;
 #X msg 1207 548 84 105 109;
@@ -100,7 +100,7 @@
 -1 -1;
 #X symbolatom 275 94 20 0 0 0 - - -;
 #X msg 294 296 add2 \$1;
-#X msg 275 332 115 111 117 114 99 101 115;
+#X msg 275 332 98 101 97 116;
 #X msg 378 270 set;
 #X obj 294 193 s2l;
 #X msg 309 171 symbol;
@@ -127,7 +127,7 @@
 #X floatatom 681 459 5 0 0 0 - - -;
 #X floatatom 698 488 5 0 0 0 - - -;
 #X obj 227 619 simpleosc;
-#X obj 284 559 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 284 559 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 197 841 clip~ -1 1;
 #X obj 292 838 clip~ -1 1;
@@ -144,6 +144,61 @@
 #X obj 757 649 simpleosc;
 #X obj 787 679 simpleosc;
 #X obj 199 783 catch~ audio;
+#N canvas 997 597 450 300 record 1;
+#X obj 140 118 f;
+#X obj 173 118 + 1;
+#X msg 140 138 open pixel_wave_\$1.wav;
+#X obj 71 18 sel 0 1;
+#X obj 90 98 t b b;
+#X msg 90 120 start;
+#X msg 71 50 stop;
+#X obj 71 -12 r start;
+#X obj 21 168 r~ audio;
+#X obj 71 198 writesf~ 2;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 0 1;
+#X connect 2 0 9 0;
+#X connect 3 0 6 0;
+#X connect 3 1 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 0 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;
+#X restore 462 856 pd record;
+#N canvas 1076 309 450 300 start 0;
+#X obj 150 20 cnv 15 130 90 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X obj 156 27 tgl 30 0 empty empty start/record 40 15 0 10 -4034 -1
+-1 0 1;
+#X floatatom 43 107 5 0 0 0 - - -;
+#X obj 16 149 s bang;
+#X obj 16 127 metro;
+#X obj 156 69 knob 32 32 50 0.001 0 0 empty empty empty 0 -8 0 8 -262144
+-262144 -1 0 1;
+#X msg 16 199 \; pd dsp 1;
+#X obj 16 179 loadbang;
+#X text 197 72 speed;
+#X obj 156 149 s start;
+#X obj 282 34 sel 0 1;
+#X msg 282 107 label start/record;
+#X msg 301 77 label stop/save;
+#X connect 1 0 4 0;
+#X connect 1 0 9 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 1;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 7 0 6 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 11 0 1 0;
+#X connect 12 0 1 0;
+#X coords 0 -1 1 1 130 90 1 150 20;
+#X restore 552 64 pd start;
 #X connect 2 0 1 0;
 #X connect 3 0 13 0;
 #X connect 4 0 5 0;
