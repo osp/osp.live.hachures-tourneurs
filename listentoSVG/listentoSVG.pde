@@ -15,6 +15,10 @@ ArrayList ve;
 int nve = 1;
 int colo;
 int record = 1;
+float shapeWidth;
+float shapeHeight;
+float factor;
+int border = 100;
 
 // global params
 float pl = 4.0; // maximum segments length
@@ -46,10 +50,27 @@ void setup() {
   grp = RG.loadShape(svgFile);
   smooth();
 
+  shapeWidth = grp.getWidth();
+  shapeHeight = grp.getHeight();
+
+  if (shapeWidth > shapeHeight) {
+      factor = (width - border) / shapeWidth;
+  } else {
+      factor = (height - border) / shapeHeight;
+  }
+
+  println("FACTOR: " + factor);
+
+  grp.scale(factor);
+  grp.translate(-grp.getX(), -grp.getY());
+  grp.translate((width - grp.getWidth()) * .5, (height - grp.getHeight()) * .5); 
+
   exVert(grp);
   println("tot points: " + ve.size());
   println(grp.getTopLeft().x);
   //grp.draw();
+
+
 }
 
 void draw() {
