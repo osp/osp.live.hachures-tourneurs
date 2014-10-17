@@ -54,7 +54,8 @@ void setup() {
 
 void draw() {
   if (nve < ve.size()) {
-    //strokeWeight(map(mouseY, 0, height, 1, 10));
+    strokeWeight(map(mouseY, 0, height, 1, 20));
+    stroke(255, 0, 0);
     if (((Point) ve.get(nve)).z != -10.0) {
       line(((Point) ve.get(nve-1)).x, ((Point) ve.get(nve-1)).y, ((Point) ve.get(nve)).x, ((Point) ve.get(nve)).y);
       float okx = (((Point) ve.get(nve)).x);

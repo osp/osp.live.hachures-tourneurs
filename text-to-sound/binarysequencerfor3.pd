@@ -1,0 +1,398 @@
+#N canvas 65 54 1375 846 10;
+#N canvas 705 182 701 675 ce 0;
+#X msg 103 98 rewind;
+#X obj 591 633 textfile;
+#X msg 80 75 bang;
+#X msg 149 144 clear;
+#X msg 240 235 set 2 4 6 8;
+#X obj 201 -69 binfile;
+#X text 266 -70 read and write binary files;
+#X text 423 350 You can also use this object simply for storing heterogeneous
+sequences of bytes.;
+#X msg 172 167 add 10 20 255;
+#X msg 126 121 read afile.bin;
+#X text 651 625 to read and write text files;
+#X msg 263 258 write afile.bin;
+#X text 498 387 This outlet gives a bang when you hit the end of the
+sequence.;
+#X text 429 447 This outlet gives the bytes in sequence \, or bangs
+if no more bytes.;
+#X text 328 234 clear the buffer and then add some bytes;
+#X text 194 143 empty the buffer;
+#X text 155 98 set the read pointer to the beginnning of the buffer
+;
+#X text 119 75 output one byte from the buffer as a float;
+#X text 380 256 write the entire buffer to a file;
+#X obj 358 453 print one;
+#X obj 35 77 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -257985
+-1;
+#X text 582 562 See also:;
+#X obj 71 27 openpanel;
+#X obj 37 -28 bng 15 250 50 0 empty empty read_any_file_into_buffer
+17 7 0 10 -4032 -258113 -1;
+#X msg 57 52 read \$1;
+#X obj 37 312 bng 15 250 50 0 empty empty save_buffer_as_any_file 17
+7 0 10 -4032 -258113 -1;
+#X msg 355 350 write \$1;
+#X obj 358 327 savepanel;
+#X msg 195 190 77 128 129 130;
+#X text 274 -30 The binfile object reads and writes binary files to
+and from a buffer in memory. You can read a file and output its contents
+one byte at a time as floats.;
+#X text 442 46 To add bytes to the buffer \, first send "clear" to
+empty the buffer and then "add" to add bytes. Finally \, "write" will
+save the entire buffer as a binary file.;
+#X floatatom 217 213 5 0 0 0 - - -;
+#X text 257 211 add one byte \, same as "add";
+#X text 307 189 add a list of bytes \, same as "add";
+#X msg 35 30 info;
+#X obj 381 423 print info;
+#X obj 430 393 print end;
+#X msg 286 281 readat 3;
+#X msg 309 304 writeat 3;
+#X text 383 304 set the write position;
+#X text 353 281 set the read position;
+#X text 460 417 This outlet gives a list of current parameters from
+the info message.;
+#X text 275 156 add a list of byte-floats to the buffer at the current
+write offset;
+#X text 128 26 output current buffer length and pointer values through
+the middle outlet.;
+#X text 233 121 read a file into the buffer and make it the new buffer
+;
+#X obj 404 401 tgl 15 0 empty empty empty 17 7 0 10 -258113 -257985
+-1 0 1;
+#X text 708 488 Martin Peach 2009/10/13;
+#N canvas 506 311 494 344 META 0;
+#X text 12 175 HELP_PATCH_AUTHORS "pd meta" information added by Jonathan
+Wilkes for Pd version 0.42.;
+#X text 12 25 LICENSE GPL v2 or later;
+#X text 12 5 KEYWORDS control filesystem;
+#X text 12 45 DESCRIPTION read and write binary files;
+#X text 12 65 INLET_0 float bang list info read rewind clear add set
+write readat writeat symbol;
+#X text 12 95 OUTLET_0 float bang;
+#X text 12 115 OUTLET_1 list;
+#X text 12 135 OUTLET_2 bang;
+#X text 12 155 AUTHOR Martin Peach;
+#X restore 832 517 pd META;
+#X floatatom 261 401 5 0 0 0 - - -;
+#X obj 154 386 mtof;
+#X floatatom 177 438 5 0 0 0 - - -;
+#N canvas 283 197 450 300 ce 0;
+#X restore 693 212 pd ce qu'on veut pas voir;
+#X obj 36 -54 inlet;
+#X obj 84 -55 inlet;
+#X obj 240 554 outlet;
+#X obj 361 378 binfile;
+#X connect 0 0 55 0;
+#X connect 2 0 55 0;
+#X connect 3 0 55 0;
+#X connect 4 0 55 0;
+#X connect 8 0 55 0;
+#X connect 9 0 55 0;
+#X connect 11 0 55 0;
+#X connect 20 0 2 0;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 24 0 55 0;
+#X connect 25 0 27 0;
+#X connect 26 0 55 0;
+#X connect 27 0 26 0;
+#X connect 28 0 55 0;
+#X connect 31 0 55 0;
+#X connect 34 0 55 0;
+#X connect 37 0 55 0;
+#X connect 38 0 55 0;
+#X connect 48 0 49 0;
+#X connect 49 0 50 0;
+#X connect 50 0 54 0;
+#X connect 52 0 23 0;
+#X connect 53 0 20 0;
+#X connect 55 0 19 0;
+#X connect 55 0 48 0;
+#X connect 55 1 35 0;
+#X connect 55 2 36 0;
+#X connect 55 2 45 0;
+#X restore 489 190 pd ce qu'on veut pas voir;
+#X obj 428 96 bng 15 250 50 0 empty empty load_fichier 17 7 0 10 -262144
+-1 -1;
+#X obj 610 104 metro;
+#X floatatom 731 42 5 0 0 0 bpm - -;
+#X obj 582 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 622 138 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 492 278 *~;
+#X obj 561 317 line~;
+#X obj 563 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 484 217 5 0 0 0 - - -;
+#X obj 538 355 line~;
+#X msg 578 364 \$1 10;
+#X obj 650 308 vsl 15 300 0 2000 0 0 empty empty harmonics 0 -9 0 10
+-262144 -1 -1 11300 1;
+#X floatatom 582 338 5 0 0 0 - - -;
+#X obj 251 346 vsl 15 128 0 2 0 0 empty empty volume 0 -9 0 10 -262144
+-1 -1 400 1;
+#X obj 339 498 line~;
+#X msg 334 444 \$1 10;
+#X floatatom 383 481 5 0 0 0 - - -;
+#X obj 403 432 *~;
+#X obj 514 440 *~;
+#X obj 489 323 *~;
+#X obj 483 367 osc~;
+#X obj 486 241 osc~;
+#N canvas 709 172 701 675 ce 0;
+#X msg 103 98 rewind;
+#X obj 591 633 textfile;
+#X msg 80 75 bang;
+#X msg 149 144 clear;
+#X msg 240 235 set 2 4 6 8;
+#X obj 201 -69 binfile;
+#X text 266 -70 read and write binary files;
+#X text 423 350 You can also use this object simply for storing heterogeneous
+sequences of bytes.;
+#X msg 172 167 add 10 20 255;
+#X msg 126 121 read afile.bin;
+#X text 651 625 to read and write text files;
+#X msg 263 258 write afile.bin;
+#X text 498 387 This outlet gives a bang when you hit the end of the
+sequence.;
+#X text 429 447 This outlet gives the bytes in sequence \, or bangs
+if no more bytes.;
+#X text 328 234 clear the buffer and then add some bytes;
+#X text 194 143 empty the buffer;
+#X text 155 98 set the read pointer to the beginnning of the buffer
+;
+#X text 119 75 output one byte from the buffer as a float;
+#X text 380 256 write the entire buffer to a file;
+#X obj 358 453 print one;
+#X obj 35 77 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -257985
+-1;
+#X text 582 562 See also:;
+#X obj 71 27 openpanel;
+#X obj 37 -28 bng 15 250 50 0 empty empty read_any_file_into_buffer
+17 7 0 10 -4032 -258113 -1;
+#X msg 57 52 read \$1;
+#X obj 37 312 bng 15 250 50 0 empty empty save_buffer_as_any_file 17
+7 0 10 -4032 -258113 -1;
+#X msg 355 350 write \$1;
+#X obj 358 327 savepanel;
+#X msg 195 190 77 128 129 130;
+#X text 274 -30 The binfile object reads and writes binary files to
+and from a buffer in memory. You can read a file and output its contents
+one byte at a time as floats.;
+#X text 442 46 To add bytes to the buffer \, first send "clear" to
+empty the buffer and then "add" to add bytes. Finally \, "write" will
+save the entire buffer as a binary file.;
+#X floatatom 217 213 5 0 0 0 - - -;
+#X text 257 211 add one byte \, same as "add";
+#X text 307 189 add a list of bytes \, same as "add";
+#X msg 35 30 info;
+#X obj 381 423 print info;
+#X obj 430 393 print end;
+#X msg 286 281 readat 3;
+#X msg 309 304 writeat 3;
+#X text 383 304 set the write position;
+#X text 353 281 set the read position;
+#X text 460 417 This outlet gives a list of current parameters from
+the info message.;
+#X text 275 156 add a list of byte-floats to the buffer at the current
+write offset;
+#X text 128 26 output current buffer length and pointer values through
+the middle outlet.;
+#X text 233 121 read a file into the buffer and make it the new buffer
+;
+#X obj 404 401 tgl 15 0 empty empty empty 17 7 0 10 -258113 -257985
+-1 0 1;
+#X text 708 488 Martin Peach 2009/10/13;
+#N canvas 506 311 494 344 META 0;
+#X text 12 175 HELP_PATCH_AUTHORS "pd meta" information added by Jonathan
+Wilkes for Pd version 0.42.;
+#X text 12 25 LICENSE GPL v2 or later;
+#X text 12 5 KEYWORDS control filesystem;
+#X text 12 45 DESCRIPTION read and write binary files;
+#X text 12 65 INLET_0 float bang list info read rewind clear add set
+write readat writeat symbol;
+#X text 12 95 OUTLET_0 float bang;
+#X text 12 115 OUTLET_1 list;
+#X text 12 135 OUTLET_2 bang;
+#X text 12 155 AUTHOR Martin Peach;
+#X restore 832 517 pd META;
+#X floatatom 261 401 5 0 0 0 - - -;
+#X obj 154 386 mtof;
+#X floatatom 177 438 5 0 0 0 - - -;
+#N canvas 283 197 450 300 ce 0;
+#X restore 693 212 pd ce qu'on veut pas voir;
+#X obj 36 -54 inlet;
+#X obj 84 -55 inlet;
+#X obj 240 554 outlet;
+#X obj 361 378 binfile;
+#X connect 0 0 55 0;
+#X connect 2 0 55 0;
+#X connect 3 0 55 0;
+#X connect 4 0 55 0;
+#X connect 8 0 55 0;
+#X connect 9 0 55 0;
+#X connect 11 0 55 0;
+#X connect 20 0 2 0;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 24 0 55 0;
+#X connect 25 0 27 0;
+#X connect 26 0 55 0;
+#X connect 27 0 26 0;
+#X connect 28 0 55 0;
+#X connect 31 0 55 0;
+#X connect 34 0 55 0;
+#X connect 37 0 55 0;
+#X connect 38 0 55 0;
+#X connect 48 0 49 0;
+#X connect 49 0 50 0;
+#X connect 50 0 54 0;
+#X connect 52 0 23 0;
+#X connect 53 0 20 0;
+#X connect 55 0 19 0;
+#X connect 55 0 48 0;
+#X connect 55 1 35 0;
+#X connect 55 2 36 0;
+#X connect 55 2 45 0;
+#X restore 1079 200 pd ce qu'on veut pas voir;
+#X obj 936 93 bng 15 250 50 0 empty empty load_fichier 17 7 0 10 -262144
+-1 -1;
+#X obj 1118 101 metro;
+#X floatatom 793 40 5 0 0 0 bpm - -;
+#X obj 1118 45 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 1130 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1050 345 *~;
+#X obj 1317 328 line~;
+#X floatatom 1078 230 5 0 0 0 HZ_ - -;
+#X obj 1846 356 line~;
+#X msg 1815 299 \$1 10;
+#X obj 1887 245 vsl 15 300 0 2000 0 0 empty empty harmonics 0 -9 0
+10 -262144 -1 -1 8400 1;
+#X floatatom 1819 273 5 0 0 0 - - -;
+#X obj 985 392 vsl 15 128 0 2 0 0 empty empty volume 0 -9 0 10 -262144
+-1 -1 1200 1;
+#X obj 1038 544 line~;
+#X msg 1033 490 \$1 10;
+#X floatatom 1082 527 5 0 0 0 - - -;
+#X obj 1102 478 *~;
+#X obj 1213 486 *~;
+#X obj 1797 324 *~;
+#X obj 1788 379 osc~;
+#X obj 1047 314 osc~;
+#X obj 806 1 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 703 706 clip~ -1 1;
+#X obj 935 703 clip~ -1 1;
+#X obj 807 786 dac~;
+#X obj 1084 347 *~;
+#X obj 1123 349 *~;
+#X obj 1010 289 line~;
+#X msg 992 262 400 \, \$1 10;
+#X obj 1220 329 line~;
+#X obj 1242 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 1284 201 0 0 0 0 - - -;
+#X obj 1282 178 max 200;
+#X msg 1222 294 1 \, 0 700;
+#X obj 927 219 s note2duration;
+#X obj 605 219 r note2duration;
+#X floatatom 644 250 5 0 0 0 HZ_ - -;
+#X obj 572 262 float;
+#X msg 561 297 1 \, 0 \$1;
+#X obj 1420 263 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1285 236 select 200;
+#X floatatom 1393 195 0 0 0 0 - - -;
+#X obj 1394 230 select 2000;
+#X obj 1399 170 min 2000;
+#X msg 1381 302 0.05 \, 0 70;
+#X text 1170 129 on selectionne les basse <200 hz & >2000hz;
+#X text 742 87 2 metronoms;
+#X text 330 297 modulation (osc to osc);
+#X text 777 705 avoid sound saturation;
+#X text 914 289 line : deals with variations on sound envelops;
+#X text 722 217 to get bits duration variations based on the other
+picture s : sound r : recieved;
+#X connect 0 0 9 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 5 0 0 1;
+#X connect 6 0 20 0;
+#X connect 7 0 6 1;
+#X connect 8 0 61 0;
+#X connect 9 0 8 0;
+#X connect 9 0 22 0;
+#X connect 10 0 20 1;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 14 0 17 0;
+#X connect 15 0 18 1;
+#X connect 15 0 19 1;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
+#X connect 18 0 46 0;
+#X connect 19 0 47 0;
+#X connect 20 0 21 0;
+#X connect 21 0 18 0;
+#X connect 21 0 19 0;
+#X connect 22 0 6 0;
+#X connect 23 0 31 0;
+#X connect 24 0 23 0;
+#X connect 25 0 28 0;
+#X connect 26 0 25 1;
+#X connect 27 0 25 0;
+#X connect 28 0 23 1;
+#X connect 29 0 40 0;
+#X connect 29 0 41 0;
+#X connect 30 0 50 0;
+#X connect 30 0 50 1;
+#X connect 31 0 52 0;
+#X connect 31 0 56 0;
+#X connect 31 0 58 0;
+#X connect 32 0 42 1;
+#X connect 33 0 32 0;
+#X connect 34 0 35 0;
+#X connect 35 0 33 0;
+#X connect 36 0 39 0;
+#X connect 37 0 40 1;
+#X connect 37 0 41 1;
+#X connect 38 0 37 0;
+#X connect 39 0 38 0;
+#X connect 40 0 46 0;
+#X connect 41 0 47 0;
+#X connect 42 0 43 0;
+#X connect 44 0 29 0;
+#X connect 45 0 4 0;
+#X connect 45 0 27 0;
+#X connect 46 0 48 0;
+#X connect 47 0 48 1;
+#X connect 49 0 29 1;
+#X connect 50 0 49 1;
+#X connect 50 0 49 0;
+#X connect 51 0 44 0;
+#X connect 52 0 51 0;
+#X connect 53 0 50 1;
+#X connect 53 0 50 0;
+#X connect 54 0 57 0;
+#X connect 55 0 64 0;
+#X connect 56 0 55 0;
+#X connect 56 0 67 0;
+#X connect 57 0 53 0;
+#X connect 59 0 60 0;
+#X connect 61 0 62 0;
+#X connect 62 0 7 0;
+#X connect 63 0 68 0;
+#X connect 64 0 54 0;
+#X connect 65 0 66 0;
+#X connect 66 0 63 0;
+#X connect 67 0 65 0;
+#X connect 68 0 30 0;

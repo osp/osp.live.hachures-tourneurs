@@ -1,6 +1,6 @@
-#N struct 1003-symarray float x array symbols 1003-sym;
-#N struct 1003-sym symbol name float on;
-#N canvas 794 96 931 998 10;
+#N struct 1051-symarray float x array symbols 1051-sym;
+#N struct 1051-sym symbol name float on;
+#N canvas 788 106 931 998 10;
 #X obj 430 -50 cnv 15 125 120 empty empty empty 20 12 0 14 -260097
 -66577 0;
 #X obj 36 151 textfile;
