@@ -4,7 +4,7 @@ ALL = \
       entchen-osp.wav \
       entchen.wav \
       overture.wav \
-      overture-osp.wav \
+      overture-osp2.wav \
       
 all: $(ALL)
 
