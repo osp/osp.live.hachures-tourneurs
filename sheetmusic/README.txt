@@ -16,3 +16,6 @@ http://www.polyphone.fr/index.php?lang=en&page=download
 http://askubuntu.com/questions/233060/recording-speaker-audio-using-avconv
 pactl list sources | grep analog-stereo.monitor
 ffmpeg -f pulse -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor  alsa-output_analog-stereo_monitor.wav
+
+CONVERT MIDI TO WAV:
+timidity -Ow [filename]
