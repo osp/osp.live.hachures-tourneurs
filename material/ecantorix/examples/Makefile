@@ -6,6 +6,8 @@ ALL = \
       overture-osp.wav \
       entchen.wav \
       entchen-osp.wav \
+      apres-osp.wav \
+      overture-glitch \
       
 all: $(ALL)
 
