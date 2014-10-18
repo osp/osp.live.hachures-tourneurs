@@ -37,8 +37,8 @@ void setup() {
   myRemoteLocation = new NetAddress("127.0.0.1", 5001);
 
   // Choice of colors
-  background(255);
-  fill(255, 102, 0);
+  background(2, 54, 78);
+  //fill(255, 102, 0);
   stroke(100);
   strokeWeight(1);
 
@@ -46,7 +46,7 @@ void setup() {
   RG.init(this);
 
   //svgFile = selectInput();
-  svgFile = "image.svg";
+  svgFile = "9.svg";
   grp = RG.loadShape(svgFile);
   smooth();
 
@@ -76,7 +76,7 @@ void setup() {
 void draw() {
   if (nve < ve.size()) {
     strokeWeight(map(mouseY, 0, height, 1, 20));
-    stroke(255, 0, 0);
+    stroke(random(126)+126, random(255), random(255), random(126));
     if (((Point) ve.get(nve)).z != -10.0) {
       line(((Point) ve.get(nve-1)).x, ((Point) ve.get(nve-1)).y, ((Point) ve.get(nve)).x, ((Point) ve.get(nve)).y);
       float okx = (((Point) ve.get(nve)).x);
@@ -119,7 +119,7 @@ void draw() {
 
 
     delay(3000);
-    background(255);
+    background(2, 54, 78);
     nve = 1;
   }
 }

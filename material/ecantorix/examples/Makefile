@@ -7,7 +7,8 @@ ALL = \
       entchen.wav \
       entchen-osp.wav \
       apres-osp.wav \
-      overture-glitch \
+      overture-glitch.wav \
+      DyingSwan-madeleines.wav \
       
 all: $(ALL)
 

@@ -15,6 +15,7 @@ http://www.polyphone.fr/index.php?lang=en&page=download
 
 http://askubuntu.com/questions/233060/recording-speaker-audio-using-avconv
 pactl list sources | grep analog-stereo.monitor
-ffmpeg -f pulse -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor sheetmusic.wav
+ffmpeg -f pulse -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor  alsa-output_analog-stereo_monitor.wav
 
-'/home/pierreh/timidity/soundfonts/Deth/Dethmetal.SF2'
+Convert midi to wav:
+timidity -Ow [filename]
