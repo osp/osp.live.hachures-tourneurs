@@ -1,6 +1,6 @@
 #N struct 1019-symarray float x array symbols 1019-sym;
 #N struct 1019-sym symbol name float on;
-#N canvas 921 106 931 998 10;
+#N canvas 918 82 931 998 10;
 #N canvas 0 85 1920 995 reserch 0;
 #X msg 1226 512 add2 \$1;
 #X msg 1207 548 84 105 109;
@@ -100,7 +100,7 @@
 -1 -1;
 #X symbolatom 75 214 20 0 0 0 - - -;
 #X msg 94 403 add2 \$1;
-#X msg 75 439 119 97 121;
+#X msg 75 439 98 121;
 #X msg 178 377 set;
 #X msg 109 291 symbol;
 #X obj 109 270 loadbang;

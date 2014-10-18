@@ -1,6 +1,6 @@
-#N struct 1064-symarray float x array symbols 1064-sym;
-#N struct 1064-sym symbol name float on;
-#N canvas 57 107 931 998 10;
+#N struct 1036-symarray float x array symbols 1036-sym;
+#N struct 1036-sym symbol name float on;
+#N canvas 57 82 931 998 10;
 #X obj 430 -50 cnv 15 145 120 empty empty empty 20 12 0 14 -260097
 -66577 0;
 #X obj 36 151 textfile;
@@ -34,14 +34,14 @@
 #X obj 36 11 t b b b b b s;
 #X obj 36 241 l2s;
 #X obj 631 181 + 1;
-#X msg 96 71 read /home/hellocatfood/Desktop/osp cr;
+#X msg 96 71 read /home/hellocatfood/Desktop/draft cr;
 #X obj 601 91 t b b b b b;
 #X obj 126 -9 print;
 #X obj 126 -50 symbol;
 #X msg 126 -30 Opened \$1;
 #X text 462 -44 open file;
 #X msg 111 41 set read \$1 cr;
-#X obj 436 17 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 436 17 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 286 543 outlet;
 #X obj 437 190 f;
@@ -59,7 +59,7 @@
 #X obj 557 512 outlet index;
 #X obj 361 652 outlet max;
 #X obj 361 572 - 1;
-#X obj 439 47 hsl 90 15 500 0 0 0 empty empty empty -2 -8 0 10 -4034
+#X obj 439 47 hsl 90 15 4000 0 0 0 empty empty empty -2 -8 0 10 -4034
 -1 -1 0 1;
 #X msg 354 71 0;
 #X obj 513 133 r reset;
