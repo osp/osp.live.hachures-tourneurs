@@ -9,6 +9,10 @@ ALL = \
       apres-osp.wav \
       overture-glitch.wav \
       DyingSwan-madeleines.wav \
+      apres-chant2.wav \
+      apres-chant2-suite.wav \
+      apres-chant2-2.wav \
+      ouverture-chant2.wav \
       
 all: $(ALL)
 
