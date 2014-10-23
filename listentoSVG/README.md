@@ -1,5 +1,7 @@
 # Listen to SVG
-A script to listen to an SVG basde on its curves
+A script to listen to an SVG basde on its curves.
+
+Processing sketch is a modification of this: http://forum.processing.org/one/topic/make-a-dot-follow-a-svg-path.html
 
 ## Requirements
 - Processing 2.2.1 (other versions untested)
